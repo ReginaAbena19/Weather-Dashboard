@@ -34,13 +34,18 @@ function saveToStorage(citySearched) {
 }
 
 function renderSearchHistoryBtns() {
-  $("#history").empty();
+  const weatherHistory = $("#history").empty();
   searchHistory.slice(0, 10).forEach((city) => {
-    const cityButton = $(`<button>${city}</button>`)
+    const cityButton = $(`<li class='list-group-item'>${city}</li>`)
       .addClass("btn btn-primary m-1")
       .on("click", () => getWeather(city));
 
-    $("#history").append(cityButton);
+    cityButton.appendTo(weatherHistory);
+  });
+
+    weatherHistory.on("click", '.list-group-item', function(){
+      fetchWeatherData($(this).text());
+
   });
 }
 
