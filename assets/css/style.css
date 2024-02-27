@@ -1,0 +1,17 @@
+body {
+  display: flex;
+  flex-direction: column;
+  
+}
+
+.container-fluid {
+  flex-grow: 1;
+}
+
+/* input area + search button  */
+.weather-search,
+.search-button {
+  height: 50px;
+}
+
+
