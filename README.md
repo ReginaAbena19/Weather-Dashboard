@@ -53,5 +53,9 @@ The challenge is deployed using Github Pages. The end result can be found here: 
 
 When viewing through the editor ensure live server is installed in order to run the index.html file in the browser.
 
+## Future Improves
+
+A more user friendly UI, right now it is very basic and boring
+
 ---
 
