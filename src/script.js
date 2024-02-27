@@ -15,6 +15,7 @@ init();
 function init() {
   renderSearchHistoryBtns();
   searchButton.on("click", handleSearch);
+  $("#clear-history-button").on("click", handleClearHistory);
 }
 
 function handleSearch(event) {
@@ -41,6 +42,12 @@ function renderSearchHistoryBtns() {
 
     $("#history").append(cityButton);
   });
+}
+
+function handleClearHistory() {
+  localStorage.removeItem("searchHistory");
+  searchHistory.length = 0; 
+  renderSearchHistoryBtns();
 }
 
 async function getWeather(citySearched) {
